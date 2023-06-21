@@ -35,9 +35,12 @@ public class mainTest {
     @Test
     public void openSite() {
         loginPageRepo.fillLoginDetails("standard_user","secret_sauce");
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(100));
         wait1.until(ExpectedConditions.visibilityOf(driver.findElement(menuBarRepo.burgerButton)));
-        menuBarRepo.burgerLoginDetails();
+        menuBarRepo.burgerDetails();
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(100));
+        wait2.until(ExpectedConditions.visibilityOf(driver.findElement(menuBarRepo.aboutButton)));
+        menuBarRepo.aboutDetails();
         /*
         System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
         WebDriver driver = new ChromeDriver();

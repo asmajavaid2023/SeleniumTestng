@@ -26,12 +26,13 @@ public class MenuBarRepo {
 
     public void clickMenuButton(){menuElement().click();}
 
-    public void burgerLoginDetails(){
+    public void burgerDetails(){
         clickBurgerButton();
-        clickAboutButton();
-
     }
 
+    public void aboutDetails(){
+        clickAboutButton();
+    }
 }
 
 

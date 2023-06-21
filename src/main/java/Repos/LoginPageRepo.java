@@ -5,11 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPageRepo {
+
+    public LoginPageRepo (WebDriver driver1){newDriver=driver1;}
+
     public WebDriver newDriver;
     public By userName = By.id("user-name");
     public By password = By.id("password");
     public By loginButton = By.id("login-button");
-    public LoginPageRepo (WebDriver driver1){newDriver=driver1;}
     public WebElement userNameElement(){return newDriver.findElement(userName);}
     public WebElement passwordElement(){return newDriver.findElement(password);}
     public WebElement loginElement(){return newDriver.findElement(loginButton);}
